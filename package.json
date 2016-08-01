@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/lucastaliberti/react-redux-tutorial#readme",
   "dependencies": {
-    "immutable": "^3.8.1"
+    "immutable": "^3.8.1",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
