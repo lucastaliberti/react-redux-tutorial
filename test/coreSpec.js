@@ -123,47 +123,39 @@ describe('application logic',()=>{
     it('create a tally for the voted entry',() => {
 
         const state = Map({
-          vote: Map({
             pair: List.of('Trainspotting','26 Days Later')
-          })
-          ,entries: List()
         })
         const nextState = vote(state,'Trainspotting')
 
         expect(nextState).to.equal(Map({
-          vote: Map({
             pair: List.of('Trainspotting','26 Days Later')
             ,tally: Map({
               'Trainspotting':1
             })
           })
-          ,entries: List()
-        }))
+        )
 
     })
 
     it('add the existing tally for the voted entry',() => {
       const state = Map({
-        vote: Map({
           pair: List.of('Trainspotting','26 Days Later')
           ,tally: Map({
             'Trainspotting':3
             ,'26 Days Later':2
           })
         })
-        ,entries: List()
-      })
+
       const nextState = vote(state,'Trainspotting')
-      expect(nextState).to.equal(fromJS({
-        vote: {
+      expect(nextState).to.equal(fromJS(
+        {
            pair: ['Trainspotting','26 Days Later']
           ,tally: {
             'Trainspotting':4
             ,'26 Days Later':2
           }
         }
-        ,entries: []
-      }))
+        ))
 
     })
   })
