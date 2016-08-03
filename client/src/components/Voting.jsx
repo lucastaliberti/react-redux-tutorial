@@ -1,4 +1,6 @@
 import React from 'react'
+import Vote from './Vote.jsx'
+import Winner from './Winner.jsx'
 
 export default class Voting extends React.PureComponent
 {
