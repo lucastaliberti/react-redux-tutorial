@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Voting extends React.Component
+export default class Voting extends React.PureComponent
 {
   getPair() {
       return this.props.pair || []
