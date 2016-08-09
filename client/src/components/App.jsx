@@ -10,7 +10,7 @@ export default class App extends React.PureComponent
     return React.cloneElement(this.props.children, {
        pair: pair
       ,tally: tally
-      ,hasVoted: 'Trainspotting'
+      ,winner: 'Trainspotting'
     })
   }
 }

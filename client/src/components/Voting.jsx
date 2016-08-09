@@ -15,7 +15,9 @@ export default class Voting extends React.PureComponent
   }
   render() {
     return <div className="voting">
-      {this.getPair().map(entry =>
+      {this.props.winner ?
+        <div ref="winner">Winner is {this.props.winner}!</div> :
+        this.getPair().map(entry =>
         <button key={entry}
                 disabled={this.isDisabled()}
                 onClick={() => this.props.vote(entry)}>
