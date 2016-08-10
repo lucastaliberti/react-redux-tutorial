@@ -1,4 +1,5 @@
 import React from 'react'
+import Winner from './Winner.jsx'
 
 export default class Results extends React.PureComponent
 {
@@ -12,7 +13,9 @@ export default class Results extends React.PureComponent
     return 0
   }
   render(){
-    return <div className='results'>
+    return this.props.winner ?
+    <Winner ref='winner' winner={this.props.winner} /> :
+    <div className='results'>
       <div className='tally'>
         {this.getPair().map(entry =>
           <div key={entry} className='entry'>
