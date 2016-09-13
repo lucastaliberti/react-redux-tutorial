@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "webpack": "webpack",
-    "test": "mocha --compilers js:babel-core/register --require ./test/testHelper.js test/**/*.js* --recursive",
+    "test": "mocha --compilers js:babel-core/register --require ./test/testHelper.js $(find test -name '*.js*')",
     "test:watch": "npm run test -- --watch --watch --watch-extensions js,jsx"
   },
   "keywords": [],
